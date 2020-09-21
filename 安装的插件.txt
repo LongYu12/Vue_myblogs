@@ -1,0 +1,80 @@
+//模板引擎 art-template
+cnpm install --save art-template
+//
+cnpm install --save bootstrap
+//基于 Node.js 平台，快速、开放、极简的 Web 开发框架
+cnpm install --save express
+
+cnpm install --save express-art-template
+//中间插件，解决POST请求的JSON数据
+注意：改产教案一定在app.ues(router)之前
+cnpm install --save body-parser
+引入：var bodyParser = require('body-parser')
+配置：
+   app.use(bodyParser.urlencoded({ extended: false }))
+   app.use(bodyParser.json())
+获取数据：var comment = req.body
+
+cnpm install --save
+
+cnpm install --save
+
+安装 MogoDB 驱动
+npm install mongodb --save
+
+使用第三方 mongoose 操作 MogoDB
+https://mongoosejs.com/
+安装这个第三方包
+npm install mongoose  //注：先装驱动再装第三方包
+操作数据库 MongoDB 参照网站
+https://mongoosejs.com/docs/api/model.html
+数据操作
+  var mongoose = require('mongoose')
+  var Schema = mongoose.Schema
+  var userSchema = new Schema({
+
+  })
+  module.exports = mongoose.model('User', userSchema)
+  //使用之前记得有没有链接数据库
+  mongoose.connect('mongodb://localhost:27017/test');
+
+启动MongoDB服务
+
+net start MongoDB
+关闭MongoDB服务
+
+net stop MongoDB
+
+
+//*启动 Mysql
+win+R 输入 service.msc
+
+//安装 Mysql 驱动
+网址 ：https://www.npmjs.com/package/mysql#install
+*安装
+npm install mysql --save
+
+//MD5
+密码加密
+链接https://www.npmjs.com/package/md5
+安装
+npm install md5
+引用
+var md5 = require('md5');
+用法
+console.log(md5('message'));
+
+//第三方插件来使用 session
+https://www.npmjs.com/package/express-session
+安装
+npm install express-session
+配置
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
+使用
+req.session 来访问session数据
+添加 Session 数据 ： req.session.foo = 'bar'
+访问 Session 数据 ： req.session.foo
